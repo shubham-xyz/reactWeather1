@@ -1,0 +1,97 @@
+/* Weather.css */
+.weather-container {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+.weather-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;    .forecast-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    
+    .forecast-table th, .forecast-table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+    
+    .forecast-table th {
+      background-color: #f2f2f2;
+      color: #333;
+    }
+    
+    .forecast-table tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    
+    .forecast-table tr:hover {
+      background-color: #ddd;
+    }    .forecast-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    
+    .forecast-table th, .forecast-table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+    
+    .forecast-table th {
+      background-color: #f2f2f2;
+      color: #333;
+    }
+    
+    .forecast-table tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    
+    .forecast-table tr:hover {
+      background-color: #ddd;
+    }
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-info p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.weather-icon {
+    width: 100px;
+    height: 100px;
+    margin: 10px 0;
+}
+
+.temperature {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff6600;
+}
+
+.description {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #666;
+}
+
+.error-message {
+    color: red;
+    font-size: 1rem;
+    margin-top: 10px;
+}
