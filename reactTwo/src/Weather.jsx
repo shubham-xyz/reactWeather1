@@ -78,40 +78,23 @@ const generateCurrentWeatherHTML = (current) => (
 );
 
 const generateForecastHTML = (days) => (
-  <table className="forecast-table">
-    <thead>
-      <tr>
-        <th>Date</th>
-        <th>Condition</th>
-        <th>Max Temp (°F)</th>
-        <th>Min Temp (°F)</th>
-        <th>Avg Temp (°F)</th>
-        <th>Humidity (%)</th>
-        <th>Wind Speed (km/h)</th>
-        <th>Precipitation (mm)</th>
-        <th>UV Index</th>
-        <th>Sunrise</th>
-        <th>Sunset</th>
-      </tr>
-    </thead>
-    <tbody>
-      {days.slice(0, 7).map((day, index) => (
-        <tr key={index}>
-          <td>{day.datetime}</td>
-          <td>{day.conditions}</td>
-          <td>{day.tempmax}</td>
-          <td>{day.tempmin}</td>
-          <td>{day.temp}</td>
-          <td>{day.humidity}</td>
-          <td>{day.windspeed}</td>
-          <td>{day.precip}</td>
-          <td>{day.uvindex}</td>
-          <td>{day.sunrise}</td>
-          <td>{day.sunset}</td>
-        </tr>
-      ))}
-    </tbody>
-  </table>
+  <div className="forecast-table">
+    {days.slice(0, 7).map((day, index) => (
+      <div className="forecast-row" key={index}>
+        <div className="forecast-cell"><strong>Date:</strong> {day.datetime}</div>
+        <div className="forecast-cell"><strong>Condition:</strong> {day.conditions}</div>
+        <div className="forecast-cell"><strong>Max Temp:</strong> {day.tempmax} °F</div>
+        <div className="forecast-cell"><strong>Min Temp:</strong> {day.tempmin} °F</div>
+        <div className="forecast-cell"><strong>Avg Temp:</strong> {day.temp} °F</div>
+        <div className="forecast-cell"><strong>Humidity:</strong> {day.humidity} %</div>
+        <div className="forecast-cell"><strong>Wind Speed:</strong> {day.windspeed} km/h</div>
+        <div className="forecast-cell"><strong>Precipitation:</strong> {day.precip} mm</div>
+        <div className="forecast-cell"><strong>UV Index:</strong> {day.uvindex}</div>
+        <div className="forecast-cell"><strong>Sunrise:</strong> {day.sunrise}</div>
+        <div className="forecast-cell"><strong>Sunset:</strong> {day.sunset}</div>
+      </div>
+    ))}
+  </div>
 );
 
 export default Weather;
